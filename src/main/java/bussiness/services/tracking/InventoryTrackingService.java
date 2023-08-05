@@ -42,7 +42,7 @@ public class InventoryTrackingService implements Runnable{
 
                     /*create query*/
                     List<ItemInventory> itemInventories = manager.createQuery(
-                            "select itemInventory from ItemInventory itemInventory where count<5",
+                            "select itemInventory from ItemInventory itemInventory where itemCount<5",
                             ItemInventory.class
                     ).getResultList();
 
