@@ -36,6 +36,7 @@ dependencies {
     implementation("org.springframework.boot:spring-boot-starter-web-services")
     implementation("org.springframework.boot:spring-boot-starter-webflux")
     implementation("dev.hilla:hilla-react-spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
 //    implementation("org.springframework.session:spring-session-jdbc")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
