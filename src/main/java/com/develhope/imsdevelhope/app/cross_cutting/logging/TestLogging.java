@@ -1,6 +1,5 @@
 package com.develhope.imsdevelhope.app.cross_cutting.logging;
 
-import com.github.javaparser.utils.Log;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
