@@ -1,4 +1,4 @@
-package com.develhope.imsdevelhope.app.business.services;
+package com.develhope.imsdevelhope.app.persistence.entities;
 
 public class Items {
     public Integer itemId;
@@ -38,6 +38,27 @@ public class Items {
         this.itemAvailable = itemAvailable;
     }
 
+    public Integer getItemStock() {
+        return itemStock;
+    }
+
+    public void setItemStock(Integer itemStock) {
+        this.itemStock = itemStock;
+    }
+
+    public void AddItem(Items items){
+
+    }
+    public Integer DeleteItem(Items items, Integer number){
+        items.itemStock = items.itemStock - number;
+        items.setItemStock(items.itemStock);
+        if(itemStock == 0){
+            items.itemAvailable = false;
+        }
+
+        return items.itemStock;
+    }
+
     @Override
     public String toString() {
         return "Items{" +
@@ -47,4 +68,5 @@ public class Items {
                 ", itemStock=" + itemStock +
                 '}';
     }
+
 }
