@@ -4,11 +4,14 @@ public class Items {
     public Integer itemId;
     public String itemName;
     public boolean itemAvailable;
+    public Integer itemStock;
 
-    public Items(Integer itemId, String itemName, boolean itemAvailable) {
+
+    public Items(Integer itemId, String itemName, boolean itemAvailable, Integer itemStock) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemAvailable = itemAvailable;
+        this.itemStock = itemStock;
     }
 
     public Integer getItemId() {
@@ -41,6 +44,7 @@ public class Items {
                 "itemId=" + itemId +
                 ", itemName='" + itemName + '\'' +
                 ", itemAvailable=" + itemAvailable +
+                ", itemStock=" + itemStock +
                 '}';
     }
 }
