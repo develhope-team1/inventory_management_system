@@ -21,7 +21,6 @@ public class Items {
         this.itemAvailable = itemAvailable;
         this.itemStock = itemStock;
     }
-
     public Items() {
 
     }
@@ -69,16 +68,6 @@ public class Items {
         }
 
         return items.itemStock;
-    }
-
-    @Override
-    public String toString() {
-        return "Items{" +
-                "itemId=" + itemId +
-                ", itemName='" + itemName + '\'' +
-                ", itemAvailable=" + itemAvailable +
-                ", itemStock=" + itemStock +
-                '}';
     }
 
     public void setId(Long id) {

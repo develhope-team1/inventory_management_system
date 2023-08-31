@@ -13,6 +13,9 @@ public class ItemLocation {
     @Id
     private Long id;
 
+    public ItemLocation() {
+    }
+
     public boolean isAddTransit() {
         return addTransit;
     }
