@@ -1,10 +1,18 @@
 package com.develhope.imsdevelhope.app.persistence.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+@Entity
+@Table(name = "SPRING_SESSION")
 public class Items {
     public Integer itemId;
     public String itemName;
     public boolean itemAvailable;
     public Integer itemStock;
+    @Id
+    private Long id;
 
 
     public Items(Integer itemId, String itemName, boolean itemAvailable, Integer itemStock) {
@@ -12,6 +20,10 @@ public class Items {
         this.itemName = itemName;
         this.itemAvailable = itemAvailable;
         this.itemStock = itemStock;
+    }
+
+    public Items() {
+
     }
 
     public Integer getItemId() {
@@ -69,4 +81,11 @@ public class Items {
                 '}';
     }
 
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getId() {
+        return id;
+    }
 }
