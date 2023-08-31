@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "SPRING_SESSION")
+@Table(name = "PURCHASES")
 public class Purchases {
     public String Cash;
     public String Credit;

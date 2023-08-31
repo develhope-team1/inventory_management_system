@@ -5,7 +5,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "SPRING_SESSION")
+@Table(name = "ITEM_LOCATION")
 public class ItemLocation {
     public boolean addTransit;
     public boolean addWarehouse;
