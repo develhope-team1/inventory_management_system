@@ -1,18 +1,29 @@
 package com.develhope.imsdevelhope.app.persistence.entities;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
+import static jakarta.persistence.GenerationType.SEQUENCE;
+//import static javax.persistence.GenerationType.SEQUENCE;
 
 @Entity
 @Table(name = "ITEMS")
 public class Items {
+    @Id
+    @SequenceGenerator(
+            name = "item_sequence",
+            sequenceName = "item_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = SEQUENCE,
+            generator = "item_sequence"
+    )
+    private Long id;
     public Integer itemId;
     public String itemName;
     public boolean itemAvailable;
     public Integer itemStock;
-    @Id
-    private Long id;
+
 
 
     public Items(Integer itemId, String itemName, boolean itemAvailable, Integer itemStock) {
