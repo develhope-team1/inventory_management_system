@@ -18,15 +18,45 @@ public class Items {
             strategy = SEQUENCE,
             generator = "item_sequence"
     )
+    @Column(
+            name = "id",
+            updatable = false
+    )
     private Long id;
+    @Column(
+            name = "item_id",
+            nullable = false,
+            columnDefinition = "INTEGER"
+    )
     public Integer itemId;
+    @Column(
+            name = "item_name",
+            nullable = false,
+            columnDefinition = "TEXT"
+    )
     public String itemName;
+
+    @Column(
+            name = "item_Description",
+            //nullable = false,
+            columnDefinition = "TEXT"
+    )
+    public String itemDescription;
+    @Column(
+            name = "item_Available",
+            nullable = false,
+            columnDefinition = "BOOLEAN"
+    )
     public boolean itemAvailable;
+    @Column(
+            name = "item_Stock",
+            nullable = false
+    )
     public Integer itemStock;
 
 
 
-    public Items(Integer itemId, String itemName, boolean itemAvailable, Integer itemStock) {
+    public Items(Integer itemId, String itemName, boolean itemAvailable, Integer itemStock, String itemDescription) {
         this.itemId = itemId;
         this.itemName = itemName;
         this.itemAvailable = itemAvailable;
@@ -34,6 +64,13 @@ public class Items {
     }
     public Items() {
 
+    }
+    public String getItemDescription() {
+        return itemDescription;
+    }
+
+    public void setItemDescription(String itemDescription) {
+        this.itemDescription = itemDescription;
     }
 
     public Integer getItemId() {
