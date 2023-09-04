@@ -28,7 +28,7 @@ public class ItemController {
         if(!addItemBool){
             return new ResponseEntity<>("Add Item failed", HttpStatus.CONFLICT);
         }
-        return new ResponseEntity<>("Adding successfull", HttpStatus.OK);
+        return new ResponseEntity<>("Adding successful", HttpStatus.OK);
     }
     @GetMapping(value = "/items/get/{id}")
     public  ResponseEntity<Items> getItem(@PathVariable("id") long id){
