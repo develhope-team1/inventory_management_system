@@ -1,0 +1,17 @@
+POST http://localhost:8080/items/add
+Content-Type: application/json
+//Cookie: JSESSIONID=1ECCDC726237CC2CB0DF97DB948EBD89
+
+{
+
+  "itemId": 100,
+  "itemName": "Dell PC",
+  "itemStock": 25,
+  "itemAvailable": true,
+  "itemDescription": "Dell Laptop"
+}
+
+###
+
+GET http://localhost:8080/items/get/1
+Content-Type: application/json

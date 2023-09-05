@@ -45,7 +45,7 @@ dependencies {
     //javax persistence
     implementation("javax.persistence:javax.persistence-api:2.2")
     implementation("org.springframework.boot:spring-boot-starter-actuator")
-//    implementation("org.springframework.session:spring-session-jdbc")
+    implementation("org.springframework.session:spring-session-jdbc")
     developmentOnly("org.springframework.boot:spring-boot-devtools")
     runtimeOnly("com.mysql:mysql-connector-j")
     annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
